@@ -20,7 +20,7 @@ def makeDict():
                     d[n][l] = [w]
             else :
                 d[n] = {l:[w]}
-                print n
+                print(n)
     pickle.dump( d, open( "dictionary.p", "wb" ) )
 
 def printDict():

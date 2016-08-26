@@ -1,5 +1,4 @@
-import pickle
-
+import cPickle as pickle
 def lookUp( w, d):
     w = w.strip()
     l = ''
@@ -7,7 +6,7 @@ def lookUp( w, d):
     j.sort()
     n = 0
     for i in j:
-        l += i        
+        l += i
         n += ord(i)
     if n in d:
         if l in d[n]:
@@ -18,10 +17,10 @@ def lookUp( w, d):
         return "Not found!"
 
 
-dbase = pickle.load(open( "dictionary.p", "rb" ) )    
+dbase = pickle.load(open( "dictionary.p", "rb" ) )
 while True:
     w = input("Enter word within '' (or 'q' to quit) : ")
     if w == 'q':
         break
     else:
-        print lookUp(w , dbase)
+        print(lookUp(w,dbase))
